@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+
+* FONTS *
+
+*/
+
+/* Great Vibes */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Great+Vibes&display=swap");
+
+/* Shadows Into Light */
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+/* Satisfy */
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+@layer base {
+  .background-image {
+    height: 100vh;
+    background-image: url("https://wallpaperset.com/w/full/b/c/8/395710.jpg");
+  }
+
+  .background-mask {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
