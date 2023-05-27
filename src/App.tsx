@@ -15,6 +15,7 @@ export default class App extends React.Component<{}> {
 
 const IntroImage: React.FC = (): React.ReactElement => {
   return (
+    /* Container where intro image "lives" */
     <div className="relative overflow-hidden bg-cover background-image text-center">
       {/* Background image mask */}
       <div className="absolute bottom-0 top-0 right-0 left-0 h-full w-full overflow-hidden bg-fixed background-mask">
@@ -24,6 +25,7 @@ const IntroImage: React.FC = (): React.ReactElement => {
   );
 };
 
+/* Color text on intro image */
 const HeadingText: React.FC = (): React.ReactElement => {
   return (
     <React.Fragment>
@@ -52,13 +54,15 @@ const HeadingText: React.FC = (): React.ReactElement => {
   );
 };
 
+/* Section below the intro image, with fresh content about current season */
 const SeasonSection: React.FC = (): React.ReactElement => {
   return (
+    // Container
     <div
       className="bg-gradient-to-r from-blue-500 to-pink-400 relative overflow-hidden py-12 px-16 w-full"
       style={{ height: "420px" }}
     >
-      {/* Heading text of urrent season publications area */}
+      {/* Heading text of current season publications area */}
       <div className="text-7xl font-dancing-script">
         <span className="text-green-400">The Spring </span>
         <span className="text-orange-400">vibe</span>

@@ -17,6 +17,12 @@
 /* Satisfy */
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
+/*
+
+* CUSTOM CSS CODE
+
+*/
+
 @layer base {
   .background-image {
     height: 100vh;
