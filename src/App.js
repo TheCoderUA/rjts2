@@ -17,7 +17,9 @@ const IntroImage = () => {
 };
 /* Color text on intro image */
 const HeadingText = () => {
-    return (React.createElement(React.Fragment, null,
+    return (
+    // May need upgrades
+    React.createElement(React.Fragment, null,
         React.createElement("p", { className: "text-9xl text-purple-600 font-bold font-great-vibes", style: { marginTop: "135px" } }, "Open"),
         React.createElement("p", { className: "text-5xl text-blue-300 font-dancing-script mt-6" }, "the"),
         React.createElement("p", { className: "m-9" },
@@ -35,12 +37,15 @@ const PostsSection = () => {
     // Container
     React.createElement("div", { className: "bg-white relative overflow-hidden py-12 px-16 w-full", style: { height: "420px" } },
         React.createElement("div", { className: "grid grid-cols-3 gap-4" },
-            React.createElement(Post, { bg: "bg-gradient-to-r from-blue-300 to-emerald-500", url: "/posts/summer-2023-#1", title: "The summer is comming!", text: "Are you ready for season of cozy nights and sunshines?" }))));
+            React.createElement(Post, { bg: "https://www.irreverentgent.com/wp-content/uploads/2023/02/Mens-Spring-Fashion-intro.jpg", url: "/posts/summer-2023-#1", title: "The summer is comming!", text: "Are you ready for season of cozy nights and sunshines?" }),
+            React.createElement(Post, { bg: "https://cdn.hemden.de/media/image/53/1a/66/Fruhjahrs-Mode-Herren.jpg", url: "/posts/summer-2023-#2", title: "Summer tips", text: "Bacame a serious man with these few tips!" }))));
 };
 const Post = ({ bg, url, title, text, }) => {
-    return (React.createElement("a", { href: url },
-        React.createElement("div", { className: `${bg} border-none bg-cover rounded-lg hover:brightness-90 transition duration-300 p-6`, style: {
-                backgroundImage: 'url("https://www.irreverentgent.com/wp-content/uploads/2023/02/Mens-Spring-Fashion-intro.jpg")',
+    return (
+    // A post is a clicable element which must have a url to it's publication post
+    React.createElement("a", { href: url },
+        React.createElement("div", { className: `border-none bg-cover rounded-lg hover:brightness-75 transition duration-700 p-6`, style: {
+                backgroundImage: `url("${bg}")`,
             } },
             React.createElement("p", { className: "text-2xl text-slate-200 font-semibold" }, title),
             React.createElement("p", { className: "text-lg text-slate-100 mt-24 mb-2 w-64" }, text))));
