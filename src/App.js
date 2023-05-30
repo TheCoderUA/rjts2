@@ -5,14 +5,17 @@ export default class App extends React.Component {
         return (React.createElement(React.Fragment, null,
             React.createElement(Navbar, null),
             React.createElement(IntroImage, null),
-            React.createElement(SeasonSection, null)));
+            React.createElement(PostsSection, null)));
     }
 }
 const IntroImage = () => {
-    return (React.createElement("div", { className: "relative overflow-hidden bg-cover background-image text-center" },
+    return (
+    /* Container where intro image "lives" */
+    React.createElement("div", { className: "relative overflow-hidden bg-cover background-image text-center" },
         React.createElement("div", { className: "absolute bottom-0 top-0 right-0 left-0 h-full w-full overflow-hidden bg-fixed background-mask" },
             React.createElement(HeadingText, null))));
 };
+/* Color text on intro image */
 const HeadingText = () => {
     return (React.createElement(React.Fragment, null,
         React.createElement("p", { className: "text-9xl text-purple-600 font-bold font-great-vibes", style: { marginTop: "135px" } }, "Open"),
@@ -26,10 +29,19 @@ const HeadingText = () => {
         React.createElement("span", { className: "text-6xl text-pink-300 font-Arial" }, "Modern"),
         React.createElement("span", { className: "text-9xl text-red-700 font-great-vibes font-bold ml-4" }, "Fashion")));
 };
-const SeasonSection = () => {
-    return (React.createElement("div", { className: "bg-gradient-to-r from-blue-500 to-pink-400 relative overflow-hidden py-12 px-16 w-full", style: { height: "420px" } },
-        React.createElement("div", { className: "text-7xl font-dancing-script" },
-            React.createElement("span", { className: "text-green-400" }, "The Spring "),
-            React.createElement("span", { className: "text-orange-400" }, "vibe"),
-            React.createElement("span", { className: "text-7xl text-pink-600 font-dancing-script bold ml-7" }, "!"))));
+/* Section below the intro image, with fresh posts */
+const PostsSection = () => {
+    return (
+    // Container
+    React.createElement("div", { className: "bg-white relative overflow-hidden py-12 px-16 w-full", style: { height: "420px" } },
+        React.createElement("div", { className: "grid grid-cols-3 gap-4" },
+            React.createElement(Post, { bg: "bg-gradient-to-r from-blue-300 to-emerald-500", url: "/posts/summer-2023-#1", title: "The summer is comming!", text: "Are you ready for season of cozy nights and sunshines?" }))));
+};
+const Post = ({ bg, url, title, text, }) => {
+    return (React.createElement("a", { href: url },
+        React.createElement("div", { className: `${bg} border-none bg-cover rounded-lg hover:brightness-90 transition duration-300 p-6`, style: {
+                backgroundImage: 'url("https://www.irreverentgent.com/wp-content/uploads/2023/02/Mens-Spring-Fashion-intro.jpg")',
+            } },
+            React.createElement("p", { className: "text-2xl text-slate-200 font-semibold" }, title),
+            React.createElement("p", { className: "text-lg text-slate-100 mt-24 mb-2 w-64" }, text))));
 };

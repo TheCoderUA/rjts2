@@ -9,6 +9,9 @@ module.exports = {
         satisfy: "Satisfy",
         "shadows-into-light": "Shadows Into Light",
       },
+      width: {
+        "w-90%": "width: 90%",
+      },
     },
   },
   plugins: [],
