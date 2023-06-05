@@ -76,7 +76,7 @@ const PostsSection: React.FC = (): React.ReactElement => {
           bg="https://cdn.hemden.de/media/image/53/1a/66/Fruhjahrs-Mode-Herren.jpg"
           url="/posts/summer-2023-#2"
           title="Summer tips"
-          text="Bacame a serious man with these few tips!"
+          text="Become a serious man with these few tips!"
         />
         <PostThumbnail
           bg="https://fashionjackson.com/wp-content/uploads/2021/02/Fashion-Jackson-Wearing-Tan-Blazer-White-Jeans-Chanel-Slingbacks.jpg"

@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import FashionNews from "./pages/FashionNews";
 import FashionTips from "./pages/FashionTips";
-import NotFoundPage from "./pages/404Page";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const App: FC = (): ReactElement => {
   return (
