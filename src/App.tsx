@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import FashionNews from "./pages/FashionNews";
 import FashionTips from "./pages/FashionTips";
+import NotFoundPage from "./pages/404Page";
 
 const App: FC = (): ReactElement => {
   return (
@@ -10,6 +11,7 @@ const App: FC = (): ReactElement => {
       <Route path="/" element={<Home />} />
       <Route path="/news" element={<FashionNews />} />
       <Route path="/tips" element={<FashionTips />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };

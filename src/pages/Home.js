@@ -36,11 +36,12 @@ const PostsSection = () => {
     // Container
     React.createElement("div", { className: "bg-gradient-to-t from-slate-500 to-black relative overflow-hidden py-12 px-16 w-full", style: { height: "640px" } },
         React.createElement("div", { className: "grid grid-rows-3 grid-cols-3 gap-4 grid-flow-row-dense" },
-            React.createElement(Post, { bg: "https://www.irreverentgent.com/wp-content/uploads/2023/02/Mens-Spring-Fashion-intro.jpg", url: "/posts/summer-2023-#1", title: "The summer is comming!", text: "Are you ready for season of cozy nights and sunshines?", gridStyle: "row-span-2" }),
-            React.createElement(Post, { bg: "https://cdn.hemden.de/media/image/53/1a/66/Fruhjahrs-Mode-Herren.jpg", url: "/posts/summer-2023-#2", title: "Summer tips", text: "Bacame a serious man with these few tips!" }),
-            React.createElement(Post, { bg: "https://fashionjackson.com/wp-content/uploads/2021/02/Fashion-Jackson-Wearing-Tan-Blazer-White-Jeans-Chanel-Slingbacks.jpg", url: "/posts/summer-2023-#3", title: "Weekend walkaround!", text: "What to wear at the weekends? Whe have few tips for it!", gridStyle: "row-span-2" }))));
+            React.createElement(PostThumbnail, { bg: "https://www.irreverentgent.com/wp-content/uploads/2023/02/Mens-Spring-Fashion-intro.jpg", url: "/posts/summer-2023-#1", title: "The summer is comming!", text: "Are you ready for season of cozy nights and sunshines?", gridStyle: "row-span-2" }),
+            React.createElement(PostThumbnail, { bg: "https://cdn.hemden.de/media/image/53/1a/66/Fruhjahrs-Mode-Herren.jpg", url: "/posts/summer-2023-#2", title: "Summer tips", text: "Bacame a serious man with these few tips!" }),
+            React.createElement(PostThumbnail, { bg: "https://fashionjackson.com/wp-content/uploads/2021/02/Fashion-Jackson-Wearing-Tan-Blazer-White-Jeans-Chanel-Slingbacks.jpg", url: "/posts/summer-2023-#3", title: "Weekend walkaround!", text: "What to wear at the weekends? Whe have few tips for it!", gridStyle: "row-span-2" }))));
 };
-const Post = ({ bg, url, title, text, gridStyle, }) => {
+const PostThumbnail = ({ bg, url, title, text, gridStyle, }) => {
+    // Function for programmatical navigation of posts
     const navigate = useNavigate();
     return (
     // A post is a clickable element which have a url to it's publication post

@@ -1,5 +1,7 @@
+// 🛠 Just a basic-template page.
 import React, { Fragment } from "react";
 import Navbar from "../components/Navbar/navbar";
+// Needs upgrade
 const FashionNews = () => {
     return (React.createElement(Fragment, null,
         React.createElement(Navbar, null),

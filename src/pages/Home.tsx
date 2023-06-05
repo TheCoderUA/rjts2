@@ -65,20 +65,20 @@ const PostsSection: React.FC = (): React.ReactElement => {
       {/* A grid layout where stored all fresh fashion posts */}
       <div className="grid grid-rows-3 grid-cols-3 gap-4 grid-flow-row-dense">
         {/* Just showing a use case of PostsSection! Not a complete example! Needs upgrade */}
-        <Post
+        <PostThumbnail
           bg="https://www.irreverentgent.com/wp-content/uploads/2023/02/Mens-Spring-Fashion-intro.jpg"
           url="/posts/summer-2023-#1"
           title="The summer is comming!"
           text="Are you ready for season of cozy nights and sunshines?"
           gridStyle="row-span-2"
         />
-        <Post
+        <PostThumbnail
           bg="https://cdn.hemden.de/media/image/53/1a/66/Fruhjahrs-Mode-Herren.jpg"
           url="/posts/summer-2023-#2"
           title="Summer tips"
           text="Bacame a serious man with these few tips!"
         />
-        <Post
+        <PostThumbnail
           bg="https://fashionjackson.com/wp-content/uploads/2021/02/Fashion-Jackson-Wearing-Tan-Blazer-White-Jeans-Chanel-Slingbacks.jpg"
           url="/posts/summer-2023-#3"
           title="Weekend walkaround!"
@@ -90,7 +90,7 @@ const PostsSection: React.FC = (): React.ReactElement => {
   );
 };
 
-type PostProps = {
+type PostThumbnailProps = {
   bg: string;
   url: string;
   title: string;
@@ -98,13 +98,13 @@ type PostProps = {
   gridStyle?: string;
 };
 
-const Post: FC<PostProps> = ({
+const PostThumbnail: FC<PostThumbnailProps> = ({
   bg,
   url,
   title,
   text,
   gridStyle,
-}: PostProps): ReactElement => {
+}: PostThumbnailProps): ReactElement => {
   // Function for programmatical navigation of posts
   const navigate: NavigateFunction = useNavigate();
 
